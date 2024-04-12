@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kea Kruise - Ticket Pricing</title>
+  <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+  <header>
+    <h1>Kea Kruise - Ticket Pricing</h1>
+  </header>
+
+  <main>
+    <h2>Manage Ticket Prices</h2> 
+    <form id="priceForm" action="save_ticket_price.php" method="POST"> 
+      <label for="priceDescription">Price Description:</label> 
+      <input type="text" id="priceDescription" name="priceDescription" required> <br><br>
+         
+      <label for="ticketPrice">Price:</label>
+      <input type="number" id="ticketPrice" name="ticketPrice" min="0" required> <br><br>
+         
+      <label for="ticketActive">Active:</label>
+      <input type="checkbox" id="ticketActive" name="ticketActive" checked><br><br>
+         
+      <input type="hidden" id="ticketPriceId" name="ticketPriceId"> 
+      <button type="submit">Save Price</button>
+    </form>
+
+    <h2>Existing Prices</h2>
+    <div id="priceTableContainer">
+      <table id="priceTable">
+        <thead>
+          <tr>
+            <th>Price Description</th>
+            <th>Price</th>
+            <th>Active</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div> 
+    <script src="ticket_pricing.js"></script>
+  </main>
+</body>
+</html>
